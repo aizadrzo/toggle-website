@@ -1,6 +1,7 @@
 ---
 import { Text } from "../components";
 import Card from "./Card.astro";
+import Container from "./Container.astro";
 
 const title = "How it works";
 const description = "A simple yet effective process";
@@ -27,7 +28,7 @@ const steps = [
 ];
 ---
 
-<section class="py-12 sm:py-16 lg:py-20 xl:py-24">
+<Container>
   <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-3xl text-center">
     <Text variant="h2">{title}</Text>
     <Text variant="p" color="secondary" className="mt-4">{description}</Text>
@@ -51,4 +52,4 @@ const steps = [
       }
     </div>
   </div>
-</section>
+</Container>

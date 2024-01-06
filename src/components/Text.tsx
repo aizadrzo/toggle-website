@@ -38,8 +38,8 @@ const TextCVA = cva("", {
     color: {
       primary: "text-gray-900",
       secondary: "text-gray-600",
-      darkPrimary: 'text-gray-50',
-      darkSecondary: 'text-gray-200'
+      'dark-primary': 'text-gray-50',
+      'dark-secondary': 'text-gray-200'
     },
   },
   defaultVariants: {

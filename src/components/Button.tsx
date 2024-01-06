@@ -14,16 +14,17 @@ export default Button
 const ButtonCVA = cva("btn rounded-md capitalize h-auto font-medium transition duration-300 ease-in-out text-base font-semibold", {
     variants: {
         variant: {
-            primary: "btn-contain btn-primary",
+            primary: "btn-contain bg-neutral-900 text-gray-50 hover:bg-neutral-700 border-none",
             secondary: "btn-outline btn-secondary",
         },
         size: {
-            'sm': 'btn-sm py-1.5 px-3 text-sm',
-            'default':'btn-md py-3 px-6',
+            'sm': 'btn-sm text-sm',
+            'default':'py-3 px-6 text-md',
           }
     },
     defaultVariants: {
         variant: 'primary',
+        size: 'default'
     }
 })
 

@@ -10,42 +10,55 @@ import {
 } from "@heroicons/react/20/solid";
 import Card from "./Card.astro";
 import Container from "./Container.astro";
+import { twJoin } from "tailwind-merge";
 
 const title = "What we do";
 
 const services = [
   {
     icon: CursorArrowRaysIcon,
+    bgColor: "bg-teal-100",
+    iconColor: "text-teal-600",
     title: "Pay-per Click Advertising",
     description:
       "Drive Conversions: Targeted campaigns on Google, Bing, & social media, leveraging keywords, ad copy, & bid optimization for high ROI.",
   },
   {
     icon: VideoCameraIcon,
+    bgColor: "bg-amber-100",
+    iconColor: "text-amber-600",
     title: "Social Media Marketing",
     description:
       "Enjoy tailored social media strategies on Facebook, Instagram, Twitter, LinkedIn, and more. Boost brand visibility and audience engagement effortlessly.",
   },
   {
     icon: PencilIcon,
+    bgColor: "bg-rose-100",
+    iconColor: "text-rose-600",
     title: "Content Marketing",
     description:
       "Eye-catching blogs, informative infographics, and more. Boost brand authority and drive organic traffic with our content marketing strategies.",
   },
   {
     icon: EnvelopeIcon,
+    bgColor: "bg-fuchsia-100",
+    iconColor: "text-fuchsia-600",
     title: "Email Marketing",
     description:
       "Maximize Email Success: Expert strategies for targeted content, improved open rates, and unparalleled conversions.",
   },
   {
     icon: CubeIcon,
-    title: "CRO",
+    bgColor: "bg-sky-100",
+    iconColor: "text-sky-600",
+    title: "Content Rate Optimization",
     description:
       "Optimize conversions with our CRO services. Utilize data-driven analysis, enhanced UX, and optimized landing pages for better results.",
   },
   {
     icon: ChartBarIcon,
+    bgColor: "bg-emerald-100",
+    iconColor: "text-emeral-600",
     title: "Analytics and Reporting",
     description:
       "Utilize real-time data for informed decisions, strategy refinement, and continuous improvement, converting clicks into effortless conversions.",
@@ -60,10 +73,15 @@ const services = [
       {
         services.map((service) => (
           <Card className="text-left">
+            <div
+              class={twJoin(
+                "inline-block p-3 sm:p-2 rounded-md mb-1",
+                service.bgColor
+              )}
+            >
+              <service.icon className={twJoin("w-6", service.iconColor)} />
+            </div>
             <div class="flex items-center gap-2">
-              <div class="py-2 shrink-0">
-                <service.icon className="w-5" />
-              </div>
               <Text variant="h3">{service.title}</Text>
             </div>
             <Text variant="small" color="secondary" className="mt-4">

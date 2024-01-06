@@ -7,18 +7,16 @@ import Process from "../layouts/Process.astro";
 import Services from "../layouts/Services.astro";
 import FAQ from "../layouts/FAQ.astro";
 import CTA from "../layouts/CTA.astro";
+import Footer from "../layouts/Footer.astro";
 ---
 
 <MainLayout>
-  <div
-    class="w-full bg-gradient-to-br from-[#E8AF93]/25 via-[#9765BE]/25 to-[#4416A5]/25"
-  >
-    <Nav />
-    <Hero />
-  </div>
+  <Nav />
+  <Hero />
   <About />
   <Process />
   <Services />
   <FAQ />
   <CTA />
+  <Footer />
 </MainLayout>

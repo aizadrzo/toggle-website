@@ -7,7 +7,7 @@ type Badge = {
 }
 
 const Badge = ({ children, className }: Badge) =>  (
-    <div className={twMerge("py-1 px-2 text-base bg-slate-600 rounded-md", className)}>{children}</div>
+    <div className={twMerge("py-1 px-4 text-sm bg-gray-50 rounded-md inline-block w-auto", className)}>{children}</div>
   )
 
 export default Badge;

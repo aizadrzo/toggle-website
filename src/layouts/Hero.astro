@@ -3,11 +3,13 @@ import { Button, Text } from "../components";
 
 const description =
   "Join Toggle on our mission to empower businesses with data-driven marketing strategies for success!";
+const caption =
+  "We saw the need for a data-driven, innovative marketing approach, inspiring the birth of Toggle. We're on a mission to empower businesses to conquer their goals with effective digital strategies. Join us on this exciting journey of growth and success!";
 ---
 
 <div class="flex-grow">
   <section class="py-32">
-    <div class="max-w-2xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+    <div class="max-w-3xl mx-auto text-center px-4 sm:px-6 lg:px-8">
       <Text variant="h1" color="primary">
         Elevate Your Brand's <br />Digital Journey
       </Text>
@@ -15,6 +17,18 @@ const description =
         {description}
       </Text>
       <Button className="mt-8">Get your Quote</Button>
+    </div>
+    <div class="max-w-3xl mx-auto mt-8 mb-4 relative">
+      <img src="/images/ads.png" />
+      <img
+        src="/images/growth.png"
+        class="drop-shadow-lg w-1/2 absolute -bottom-4 sm:-left-10 animate-wiggle"
+      />
+    </div>
+    <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-3xl text-center">
+      <Text variant="small" color="secondary" className="pt-4">
+        {caption}
+      </Text>
     </div>
   </section>
 </div>

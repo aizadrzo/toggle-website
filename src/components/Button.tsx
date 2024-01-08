@@ -14,12 +14,12 @@ export default Button
 const ButtonCVA = cva("btn rounded-md capitalize h-auto font-medium transition duration-300 ease-in-out text-base font-semibold", {
     variants: {
         variant: {
-            primary: "btn-contain bg-neutral-900 text-gray-50 hover:bg-neutral-700 border-none",
-            secondary: "btn-outline btn-secondary",
+            primary: "btn-contain bg-[#0057ff] text-white hover:bg-[#0057ff]",
+            secondary: "btn bg-black text-white border border-black bg-[#181818] hover:bg-[#181818] hover:border-black",
         },
         size: {
-            'sm': 'btn-sm text-sm',
-            'default':'py-3 px-6 text-md',
+            'sm': 'px-6 text-sm',
+            'default':'h-14 px-9 text-lg',
           }
     },
     defaultVariants: {

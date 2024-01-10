@@ -3,11 +3,12 @@ import { Button, Text } from "../components";
 
 const description =
   "Join Toggle on our mission to empower businesses with data-driven marketing strategies for success!";
+const button_text = "Get in touch";
 ---
 
 <section class="relative py-40 sm:mt-12">
   <div class="px-4 max-w-3xl mx-auto sm:px-6 lg:px-8">
-    <div class="text-center">
+    <div class="text-center" data-aos="fade-up">
       <Text variant="h1">
         Elevate Your Brand's <br />Digital Journey
       </Text>
@@ -18,7 +19,7 @@ const description =
       >
         {description}
       </Text>
-      <Button className="mt-4 sm:mt-8">Get your Quote</Button>
+      <Button className="mt-4 sm:mt-8">{button_text}</Button>
     </div>
   </div>
 </section>

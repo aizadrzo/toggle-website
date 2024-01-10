@@ -19,11 +19,12 @@ const ButtonCVA = cva("btn rounded-md capitalize h-auto font-medium transition d
         },
         size: {
             'sm': 'btn-sm py-1.5 px-3 text-sm',
-            'default':'py-4 px-5 text-xl',
+            'default':'py-4 px-5 text-lg tracking-wide',
           }
     },
     defaultVariants: {
         variant: 'primary',
+        size:'default'
     }
 })
 

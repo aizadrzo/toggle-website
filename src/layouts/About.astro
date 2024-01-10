@@ -1,16 +1,49 @@
 ---
 import { Text } from "../components";
+import { CheckCircleIcon } from "@heroicons/react/24/outline";
 
-const title = "About Us";
+const title = "Unlock Your Growth Potential";
 const description =
-  "We saw the need for a data-driven, innovative marketing approach, inspiring the birth of Toggle. We're on a mission to empower businesses to conquer their goals with effective digital strategies. Join us on this exciting journey of growth and success!";
+  "Partner with Toggle for data-driven marketing strategies, propelling businesses towards exponential growth and success.";
+
+const values = [
+  {
+    title: "Data-driven success",
+    description:
+      "Data-driven strategies delivering tangible results for our clients.",
+  },
+  {
+    title: "Stay ahead of the curve",
+    description:
+      "Digital success made simple with our innovative solutions and cutting-edge strategies.",
+  },
+  {
+    title: "Transparency and Visibility",
+    description: "Build transparent partnerships for shared success.",
+  },
+];
 ---
 
-<section class="py-12 sm:py-16 lg:py-20 xl:py-24">
-  <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-3xl text-center">
-    <Text variant="h2">{title}</Text>
-    <Text variant="p" color="secondary" className="mt-4 sm:mt-8">
-      {description}
-    </Text>
+<section class="py-12 sm:py-16 lg:py-20 xl:py-24 bg-neutral-50">
+  <div class="px-4 sm:px-6 lg:px-8 text-center">
+    <div class="max-w-3xl mx-auto text-center">
+      <Text variant="h2">{title}</Text>
+      <Text variant="p" color="secondary" className="mt-4">
+        {description}
+      </Text>
+    </div>
+    <div class="max-w-5xl mx-auto bg-gray-50 w-full h-60 mt-8"></div>
+    <div class="mt-8">
+      <div class="flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
+        {
+          values.map((value) => (
+            <div class="flex gap-1 items-center">
+              <CheckCircleIcon className="w-5" />
+              <Text variant="p">{value.title}</Text>
+            </div>
+          ))
+        }
+      </div>
+    </div>
   </div>
 </section>

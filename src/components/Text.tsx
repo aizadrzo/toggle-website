@@ -19,11 +19,11 @@ const tags: Record<Variant, ElementType> = {
 };
 
 const sizes: Record<Variant, string> = {
-  h1: "text-4xl font-bold sm:text-6xl",
-  h2: "text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl",
-  h3: "text-lg font-semibold sm:text-xl",
-  p: "text-base sm:text-lg",
-  small: "text-xs sm:text-sm",
+  h1: "text-5xl font-semibold sm:text-6xl font-serif",
+  h2: "text-3xl font-semibold tracking-tight sm:text-5xl font-serif",
+  h3: "text-lg font-semibold sm:text-xl font-serif",
+  p: "text-base sm:text-lg font-sans",
+  small: "text-xs sm:text-sm font-sans",
 };
 
 const Text = ({ variant, children, color, className }: Text) => {
@@ -36,10 +36,10 @@ const Text = ({ variant, children, color, className }: Text) => {
 const TextCVA = cva("", {
   variants: {
     color: {
-      primary: "text-gray-900",
-      secondary: "text-gray-600",
-      darkPrimary: 'text-gray-50',
-      darkSecondary: 'text-gray-200'
+      primary: "text-neutral-900",
+      secondary: "text-neutral-500",
+      darkPrimary: 'text-neutral-50',
+      darkSecondary: 'text-neutral-200'
     },
   },
   defaultVariants: {

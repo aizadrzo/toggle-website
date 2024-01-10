@@ -9,43 +9,57 @@ import {
   ChartBarIcon,
 } from "@heroicons/react/20/solid";
 import Card from "./Card.astro";
+import { twJoin } from "tailwind-merge";
 
 const title = "What we do";
+const description = "Services that suits your business needs";
 
 const services = [
   {
     icon: CursorArrowRaysIcon,
     title: "Pay-per Click Advertising",
+    bgColor: "bg-amber-100",
+    color: "text-amber-600",
     description:
       "Drive Conversions: Targeted campaigns on Google, Bing, & social media, leveraging keywords, ad copy, & bid optimization for high ROI.",
   },
   {
     icon: VideoCameraIcon,
     title: "Social Media Marketing",
+    bgColor: "bg-cyan-100",
+    color: "text-cyan-600",
     description:
       "Enjoy tailored social media strategies on Facebook, Instagram, Twitter, LinkedIn, and more. Boost brand visibility and audience engagement effortlessly.",
   },
   {
     icon: PencilIcon,
     title: "Content Marketing",
+    bgColor: "bg-lime-100",
+    color: "text-lime-600",
     description:
       "Eye-catching blogs, informative infographics, and more. Boost brand authority and drive organic traffic with our content marketing strategies.",
   },
   {
     icon: EnvelopeIcon,
     title: "Email Marketing",
+    bgColor: "bg-sky-100",
+    color: "text-sky-600",
     description:
       "Maximize Email Success: Expert strategies for targeted content, improved open rates, and unparalleled conversions.",
   },
   {
     icon: CubeIcon,
-    title: "CRO",
+    title: "Content Rate Optimization",
+    bgColor: "bg-fuchsia-100",
+    color: "text-fuchsia-600",
     description:
       "Optimize conversions with our CRO services. Utilize data-driven analysis, enhanced UX, and optimized landing pages for better results.",
   },
   {
     icon: ChartBarIcon,
     title: "Analytics and Reporting",
+    bgColor: "bg-rose-100",
+    color: "text-rose-600",
     description:
       "Utilize real-time data for informed decisions, strategy refinement, and continuous improvement, converting clicks into effortless conversions.",
   },
@@ -53,19 +67,29 @@ const services = [
 ---
 
 <section class="py-12 sm:py-16 lg:py-20 xl:py-24">
-  <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-3xl text-center">
+  <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-5xl text-center">
     <Text variant="h2">{title}</Text>
-    <div class="grid grid-cols-1 md:grid-cols-2 mt-4 sm:mt-8 gap-4">
+    <Text variant="p" color="secondary" className="mt-4">{description}</Text>
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-4 sm:mt-8 gap-4"
+    >
       {
         services.map((service) => (
           <Card className="text-left">
-            <div class="flex items-center gap-2">
-              <div class="py-2 shrink-0">
-                <service.icon className="w-5" />
-              </div>
-              <Text variant="h3">{service.title}</Text>
+            <div
+              class={twJoin(
+                "p-4 inline-block rounded-md mb-2",
+                service.bgColor
+              )}
+            >
+              <service.icon className={twJoin("w-6", service.color)} />
             </div>
-            <Text variant="small" color="secondary" className="mt-4">
+            <Text variant="h3">{service.title}</Text>
+            <Text
+              variant="small"
+              color="secondary"
+              className="mt-4 leading-tight"
+            >
               {service.description}
             </Text>
           </Card>

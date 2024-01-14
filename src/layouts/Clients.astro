@@ -1,0 +1,40 @@
+---
+import { Text } from "../components";
+import Container from "./Container.astro";
+
+const title = "Who've we worked with";
+const description = "Our featured clients";
+---
+
+<Container className="bg-neutral-900">
+  <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-5xl text-center">
+    <div class="max-w-3xl mx-auto">
+      <Text variant="h2" color="darkPrimary">{title}</Text>
+      <Text variant="p" color="darkSecondary" className="mt-4">
+        {description}
+      </Text>
+    </div>
+    <div class="mt-4 sm:mt-8">
+      <div class="grid grid-cols-2 lg:grid-cols-3 gap-4">
+        <Text variant="p" color="darkSecondary" className="font-bold p-5">
+          Client 1
+        </Text>
+        <Text variant="p" color="darkSecondary" className="font-bold p-5">
+          Client 1
+        </Text>
+        <Text variant="p" color="darkSecondary" className="font-bold p-5">
+          Client 1
+        </Text>
+        <Text variant="p" color="darkSecondary" className="font-bold p-5">
+          Client 1
+        </Text>
+        <Text variant="p" color="darkSecondary" className="font-bold p-5">
+          Client 1
+        </Text>
+        <Text variant="p" color="darkSecondary" className="font-bold p-5">
+          Client 1
+        </Text>
+      </div>
+    </div>
+  </div>
+</Container>

@@ -1,52 +1,58 @@
 ---
 import { Text } from "../components";
-import { CheckCircleIcon } from "@heroicons/react/24/outline";
+import Container from "./Container.astro";
+import Card from "./Card.astro";
+
+const title = "We scale brands";
 
 const description =
   "Partner with Toggle for data-driven marketing strategies, propelling businesses towards exponential growth and success.";
 
-const values = [
+const stats = [
   {
-    title: "Data-driven success",
-    description:
-      "Data-driven strategies delivering tangible results for our clients.",
+    number: "$44M",
+    description: "Revenue Generated",
   },
   {
-    title: "Stay ahead of the curve",
-    description:
-      "Digital success made simple with our innovative solutions and cutting-edge strategies.",
+    number: "230%",
+    description: "Average yearly growth",
   },
   {
-    title: "Transparency and Visibility",
-    description: "Build transparent partnerships for shared success.",
+    number: "90%",
+    description: "Increase in ROAS",
   },
 ];
 ---
 
-<section class="py-12 sm:py-16 lg:py-20 xl:py-24 bg-neutral-50">
+<Container>
   <div class="px-4 sm:px-6 lg:px-8 text-center">
-    <div class="max-w-3xl mx-auto text-center">
-      <Text variant="h2">We scale brands</Text>
-      <Text variant="p" color="secondary" className="mt-4">
-        {description}
-      </Text>
-    </div>
-    <div
-      class="max-w-5xl mx-auto bg-neutral-200 w-full h-60 mt-8"
-      data-aos="fade-up"
-    >
-    </div>
-    <div class="mt-8">
-      <div class="flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
-        {
-          values.map((value) => (
-            <div class="flex gap-1 items-center">
-              <CheckCircleIcon className="w-5" />
-              <Text variant="p">{value.title}</Text>
-            </div>
-          ))
-        }
+    <div class="max-w-5xl mx-auto">
+      <div class="max-w-3xl mx-auto">
+        <div>
+          <Text variant="h2">{title}</Text>
+        </div>
+        <Text variant="p" color="secondary" className="mt-4">
+          {description}
+        </Text>
+      </div>
+      <div class="mt-4 sm:mt-8">
+        <div
+          class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center justify-center"
+        >
+          {
+            stats.map((stat) => (
+              <div data-aos="fade-up">
+                <Card className="p-8">
+                  <Text variant="h2">{stat.number}</Text>
+                  <Text variant="p" className="pt-2" color="secondary">
+                    {stat.description}
+                  </Text>
+                </Card>
+              </div>
+            ))
+          }
+        </div>
       </div>
     </div>
   </div>
-</section>
+</Container>

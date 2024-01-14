@@ -19,8 +19,8 @@ const tags: Record<Variant, ElementType> = {
 };
 
 const sizes: Record<Variant, string> = {
-  h1: "text-5xl font-semibold sm:text-6xl font-serif",
-  h2: "text-3xl font-semibold tracking-tight sm:text-5xl font-serif",
+  h1: "text-5xl font-semibold sm:text-7xl font-serif",
+  h2: "text-3xl font-semibold sm:text-5xl tracking-tight font-serif",
   h3: "text-lg font-semibold sm:text-xl font-serif",
   p: "text-base sm:text-lg font-sans",
   small: "text-xs sm:text-sm font-sans",

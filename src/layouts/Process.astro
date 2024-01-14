@@ -32,7 +32,7 @@ const steps = [
 ];
 ---
 
-<Container>
+<Container className="bg-random-egg">
   <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-3xl text-center">
     <Text variant="h2">{title}</Text>
     <Text variant="p" color="secondary" className="mt-4">{description}</Text>
@@ -40,9 +40,9 @@ const steps = [
       {
         steps.map((step) => (
           <div data-aos="fade-up" data-aos-delay={step.delay}>
-            <Card className="bg-random-egg">
+            <Card className="bg-white drop-shadow-lg border border-gray-200">
               <div class="flex items-start sm:items-center">
-                <div class="inline-flex items-center justify-center flex-shrink-0 w-10 h-10 sm:w-14 sm:h-14 rounded-xl bg-white">
+                <div class="inline-flex items-center justify-center flex-shrink-0 w-10 h-10 sm:w-14 sm:h-14 rounded-xl bg-random-egg">
                   <Text variant="h3">{step.index}</Text>
                 </div>
                 <div class="ml-4 text-left">

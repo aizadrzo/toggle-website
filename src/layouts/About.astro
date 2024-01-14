@@ -1,5 +1,5 @@
 ---
-import { Text } from "../components";
+import { Button, Text } from "../components";
 import Card from "./Card.astro";
 import Container from "./Container.astro";
 
@@ -27,12 +27,50 @@ const title = "What we are all about";
           >. Join us in navigating the dynamic landscape of <span
             class="text-black-300">digital marketing</span
           >, where effective strategies are the key to unlocking new heights for
-          your business.<br /><br />
-          <span
-            class="underline underline-offset-2 decoration-yolk-100 decoration-2"
-            >Ready to embark on this exciting adventure together?</span
-          >
+          your business.
+          <br /><br />Ready to start this journey together?
         </Text>
+        <div class="pt-4 flex items-center justify-start">
+          <div class="avatar-group -space-x-6 rtl:space-x-reverse">
+            <div class="avatar border-transparent">
+              <div class="w-12">
+                <img
+                  src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+                />
+              </div>
+            </div>
+            <div class="avatar border-transparent">
+              <div class="w-12">
+                <img
+                  src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+                />
+              </div>
+            </div>
+            <div class="avatar border-transparent">
+              <div class="w-12">
+                <img
+                  src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+                />
+              </div>
+            </div>
+            <div class="avatar border-transparent">
+              <div class="w-12">
+                <img
+                  src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="text-left w-full">
+            <Button
+              variant="secondary"
+              size="sm"
+              className="decoration-yolk-100"
+            >
+              Get in Touch
+            </Button>
+          </div>
+        </div>
       </Card>
     </div>
   </div>

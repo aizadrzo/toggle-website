@@ -15,10 +15,10 @@ const ButtonCVA = cva("btn rounded-md capitalize h-auto font-medium transition d
     variants: {
         variant: {
             primary: "btn-contain bg-yolk-100 border-none text-black-300 hover:bg-yolk-200",
-            secondary: "btn-outline btn-secondary",
+            secondary: "btn-link btn-secondary underline-offset-2",
         },
         size: {
-            'sm': 'btn-sm py-1.5 px-3 text-sm',
+            'sm': 'btn-sm py-1.5 px-3 text-base',
             'default':'py-4 px-5 text-lg tracking-wide',
           }
     },

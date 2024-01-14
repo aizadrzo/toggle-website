@@ -8,32 +8,38 @@ const title = "Frequently Asked Questions";
 const faqs = [
   {
     question: "What services do you offer?",
+    delay: 200,
     answer:
       "We offer a wide range of digital marketing services, including PPC advertising, social media marketing, content marketing, email marketing, cro & analytics and reporting.",
   },
   {
     question: "How can digital marketing help my business?",
+    delay: 400,
     answer:
       "Digital marketing can significantly boost your online presence, increase brand visibility, drive targeted traffic to your website, and generate qualified leads, leading to higher conversions and business growth.",
   },
   {
     question: "What sets your agency apart from others?",
+    delay: 600,
     answer:
       "At our agency, we prioritize data-driven strategies, innovative thinking, and transparent communication. Our team is dedicated to delivering tangible results and helping businesses succeed in the competitive digital landscape.",
   },
   {
     question: "Do you work with businesses of all sizes?",
+    delay: 800,
     answer:
       "Yes, we work with businesses of all sizes, from startups to large enterprises. Our customized solutions cater to the unique needs and goals of each client, ensuring their digital success.",
   },
   {
     question: "What type of content do you create for social media marketing?",
+    delay: 1000,
     answer:
       "We create engaging and relevant content, including eye-catching visuals, informative blog posts, interactive videos, and shareable infographics. Our goal is to build brand awareness and foster a loyal community on social media platforms.",
   },
   {
     question:
       "How long does it take to see results from digital marketing efforts?",
+    delay: 1200,
     answer:
       "The timeline for results varies depending on your industry, competition, and the strategies implemented. Some campaigns may yield quicker results, while others may take a few months to demonstrate significant improvements.",
   },
@@ -46,17 +52,19 @@ const faqs = [
     <div class="mt-4 sm:mt-8 space-y-4">
       {
         faqs.map((faq) => (
-          <Card className="collapse collapse-arrow p-0 border-2 border-random-egg bg-white">
-            <input type="radio" name="my-accordion-1" checked="checked" />
-            <div class="collapse-title pt-5 px-5">
-              <Text variant="h3">{faq.question}</Text>
-            </div>
-            <div class="collapse-content px-5">
-              <Text variant="p" color="secondary">
-                {faq.answer}
-              </Text>
-            </div>
-          </Card>
+          <div data-aos="fade-up" data-aos-delay={faq.delay}>
+            <Card className="collapse collapse-arrow p-0 border border-gray-200 bg-white">
+              <input type="radio" name="my-accordion-1" checked="checked" />
+              <div class="collapse-title pt-5 px-5">
+                <Text variant="h3">{faq.question}</Text>
+              </div>
+              <div class="collapse-content px-5">
+                <Text variant="p" color="secondary">
+                  {faq.answer}
+                </Text>
+              </div>
+            </Card>
+          </div>
         ))
       }
     </div>

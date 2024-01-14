@@ -36,10 +36,10 @@ const Text = ({ variant, children, color, className }: Text) => {
 const TextCVA = cva("", {
   variants: {
     color: {
-      primary: "text-neutral-900",
-      secondary: "text-neutral-500",
-      darkPrimary: 'text-neutral-50',
-      darkSecondary: 'text-neutral-200'
+      primary: "text-black-300",
+      secondary: "text-gray-300",
+      'dark-primary': 'text-white',
+      'dark-secondary': 'text-gray-100'
     },
   },
   defaultVariants: {

@@ -1,58 +1,39 @@
 ---
 import { Text } from "../components";
-import Container from "./Container.astro";
 import Card from "./Card.astro";
+import Container from "./Container.astro";
 
-const title = "We scale brands";
-
-const description =
-  "Partner with Toggle for data-driven marketing strategies, propelling businesses towards exponential growth and success.";
-
-const stats = [
-  {
-    number: "$44M",
-    description: "Revenue Generated",
-  },
-  {
-    number: "230%",
-    description: "Average yearly growth",
-  },
-  {
-    number: "90%",
-    description: "Increase in ROAS",
-  },
-];
+const title = "What we are all about";
 ---
 
-<Container>
-  <div class="px-4 sm:px-6 lg:px-8 text-center">
-    <div class="max-w-5xl mx-auto">
-      <div class="max-w-3xl mx-auto">
-        <div>
-          <Text variant="h2">{title}</Text>
-        </div>
-        <Text variant="p" color="secondary" className="mt-4">
-          {description}
+<Container className="bg-random-egg">
+  <div class="px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto text-center">
+    <Text variant="h2">{title}</Text>
+    <div data-aos="fade-up">
+      <Card
+        className="mt-4 sm:mt-8 bg-white p-8 border border-gray-200 drop-shadow-lg"
+      >
+        <Text variant="p" color="secondary" className="text-left">
+          Hello, we are <span class="text-black-300">Toggle!</span> 👋🏻<br /> At Toggle,
+          we've identified the need for a more <span class="text-black-300"
+            >data-centric and innovative approach</span
+          >
+          to marketing. Our vision is to empower businesses to achieve their objectives
+          through impactful <span class="text-black-300"
+            >digital strategies</span
+          >. <br /><br />We're on a mission to guide companies on an
+          exhilarating journey towards <span class="text-black-300"
+            >growth and success</span
+          >. Join us in navigating the dynamic landscape of <span
+            class="text-black-300">digital marketing</span
+          >, where effective strategies are the key to unlocking new heights for
+          your business.<br /><br />
+          <span
+            class="underline underline-offset-2 decoration-yolk-100 decoration-2"
+            >Ready to embark on this exciting adventure together?</span
+          >
         </Text>
-      </div>
-      <div class="mt-4 sm:mt-8">
-        <div
-          class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center justify-center"
-        >
-          {
-            stats.map((stat) => (
-              <div data-aos="fade-up">
-                <Card className="p-8">
-                  <Text variant="h2">{stat.number}</Text>
-                  <Text variant="p" className="pt-2" color="secondary">
-                    {stat.description}
-                  </Text>
-                </Card>
-              </div>
-            ))
-          }
-        </div>
-      </div>
+      </Card>
     </div>
   </div>
 </Container>

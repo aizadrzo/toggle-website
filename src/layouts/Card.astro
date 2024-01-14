@@ -4,10 +4,7 @@ const { className } = Astro.props;
 ---
 
 <div
-  class={twMerge(
-    "animate relative p-5 overflow-hidden bg-white border border-neutral-200 rounded-2xl",
-    className
-  )}
+  class={twMerge("animate relative p-5 overflow-hidden rounded-2xl", className)}
 >
   <slot />
 </div>

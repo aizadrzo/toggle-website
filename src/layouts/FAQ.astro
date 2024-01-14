@@ -3,8 +3,7 @@ import { Text } from "../components";
 import Card from "./Card.astro";
 import Container from "./Container.astro";
 
-const title = "FAQ";
-const description = "Frequently Asked Questions";
+const title = "Frequently Asked Questions";
 
 const faqs = [
   {
@@ -41,16 +40,13 @@ const faqs = [
 ];
 ---
 
-<Container className="bg-neutral-50">
+<Container className="relative">
   <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-3xl">
     <Text variant="h2" className="text-center">{title}</Text>
-    <Text variant="p" color="secondary" className="text-center mt-4">
-      {description}
-    </Text>
     <div class="mt-4 sm:mt-8 space-y-4">
       {
         faqs.map((faq) => (
-          <Card className="collapse collapse-arrow p-0">
+          <Card className="collapse collapse-arrow p-0 border-2 border-random-egg bg-white">
             <input type="radio" name="my-accordion-1" checked="checked" />
             <div class="collapse-title pt-5 px-5">
               <Text variant="h3">{faq.question}</Text>
@@ -64,5 +60,9 @@ const faqs = [
         ))
       }
     </div>
+  </div>
+  <div
+    class="absolute -z-10 top-5 h-full w-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]"
+  >
   </div>
 </Container>

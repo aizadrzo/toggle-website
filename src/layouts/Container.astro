@@ -3,8 +3,6 @@ import { twMerge } from "tailwind-merge";
 const { className } = Astro.props;
 ---
 
-<div
-  class={twMerge("animate relative p-5 overflow-hidden rounded-2xl", className)}
->
+<section class={twMerge("py-12 sm:py-16 lg:py-20 xl:py-24", className)}>
   <slot />
-</div>
+</section>

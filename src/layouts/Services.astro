@@ -1,76 +1,93 @@
 ---
 import { Text } from "../components";
-import {
-  CursorArrowRaysIcon,
-  VideoCameraIcon,
-  PencilIcon,
-  EnvelopeIcon,
-  CubeIcon,
-  ChartBarIcon,
-} from "@heroicons/react/20/solid";
 import Card from "./Card.astro";
+import Container from "./Container.astro";
 
-const title = "What we do";
+const title = "What is it we do";
 
 const services = [
   {
-    icon: CursorArrowRaysIcon,
+    icon: "💵",
     title: "Pay-per Click Advertising",
+    bgColor: "bg-amber-100",
+    color: "text-amber-600",
+    delay: 200,
     description:
       "Drive Conversions: Targeted campaigns on Google, Bing, & social media, leveraging keywords, ad copy, & bid optimization for high ROI.",
   },
   {
-    icon: VideoCameraIcon,
+    icon: "❤️",
     title: "Social Media Marketing",
+    bgColor: "bg-cyan-100",
+    color: "text-cyan-600",
+    delay: 400,
     description:
       "Enjoy tailored social media strategies on Facebook, Instagram, Twitter, LinkedIn, and more. Boost brand visibility and audience engagement effortlessly.",
   },
   {
-    icon: PencilIcon,
+    icon: "🖋️",
     title: "Content Marketing",
+    bgColor: "bg-lime-100",
+    color: "text-lime-600",
+    delay: 600,
     description:
       "Eye-catching blogs, informative infographics, and more. Boost brand authority and drive organic traffic with our content marketing strategies.",
   },
   {
-    icon: EnvelopeIcon,
+    icon: "📫",
     title: "Email Marketing",
+    bgColor: "bg-sky-100",
+    color: "text-sky-600",
+    delay: 800,
     description:
-      "Maximize Email Success: Expert strategies for targeted content, improved open rates, and unparalleled conversions.",
+      "Elevate your email marketing success with expert strategies, ensuring targeted content, improved open rates, and unparalleled conversions.",
   },
   {
-    icon: CubeIcon,
-    title: "CRO",
+    icon: "🔩",
+    title: "Content Rate Optimization",
+    bgColor: "bg-fuchsia-100",
+    color: "text-fuchsia-600",
+    delay: 1000,
     description:
       "Optimize conversions with our CRO services. Utilize data-driven analysis, enhanced UX, and optimized landing pages for better results.",
   },
   {
-    icon: ChartBarIcon,
+    icon: "📊",
     title: "Analytics and Reporting",
+    bgColor: "bg-rose-100",
+    color: "text-rose-600",
+    delay: 1200,
     description:
       "Utilize real-time data for informed decisions, strategy refinement, and continuous improvement, converting clicks into effortless conversions.",
   },
 ];
 ---
 
-<section class="py-12 sm:py-16 lg:py-20 xl:py-24">
-  <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-3xl text-center">
+<Container>
+  <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-5xl text-center">
     <Text variant="h2">{title}</Text>
-    <div class="grid grid-cols-1 md:grid-cols-2 mt-4 sm:mt-8 gap-4">
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-4 sm:mt-8 gap-4"
+    >
       {
         services.map((service) => (
-          <Card className="text-left">
-            <div class="flex items-center gap-2">
-              <div class="py-2 shrink-0">
-                <service.icon className="w-5" />
+          <div data-aos="fade-up" data-aos-delay={service.delay}>
+            <Card className="text-left bg-white border border-gray-200 drop-shadow-lg">
+              <div class="w-12 h-12 rounded-full mb-2 bg-gray-100 grid place-content-center">
+                <Text variant="h3">{service.icon}</Text>
               </div>
-              <Text variant="h3">{service.title}</Text>
-            </div>
-            <Text variant="small" color="secondary" className="mt-4">
-              {service.description}
-            </Text>
-          </Card>
+              <Text variant="h4">{service.title}</Text>
+              <Text
+                variant="small"
+                color="secondary"
+                className="mt-4 leading-tight"
+              >
+                {service.description}
+              </Text>
+            </Card>
+          </div>
         ))
       }
     </div>
   </div>
-</section>
+</Container>

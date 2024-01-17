@@ -1,16 +1,42 @@
 ---
-import { Text } from "../components";
+import { Button, Text } from "../components";
+import Container from "./Container.astro";
 
-const title = "About Us";
-const description =
-  "We saw the need for a data-driven, innovative marketing approach, inspiring the birth of Toggle. We're on a mission to empower businesses to conquer their goals with effective digital strategies. Join us on this exciting journey of growth and success!";
+const title = "What we are all about";
 ---
 
-<section class="py-12 sm:py-16 lg:py-20 xl:py-24">
-  <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-3xl text-center">
+<Container>
+  <div class="px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto text-center">
     <Text variant="h2">{title}</Text>
-    <Text variant="p" color="secondary" className="mt-4 sm:mt-8">
-      {description}
-    </Text>
+    <div class="mt-4 sm:mt-8 grid grid-cols-1 lg:grid-cols-2 gap-4">
+      <div data-aos="fade-up" class="aspect-square bg-gray-100 rounded-md">
+      </div>
+      <div class="lg:px-5">
+        <Text variant="p" color="secondary" className="text-left">
+          Hello, we are <span class="text-black-300">Toggle!</span> 👋🏻<br /> At Toggle,
+          we've identified the need for a more <span class="text-black-300"
+            >data-centric and innovative approach</span
+          >
+          to marketing. Our vision is to empower businesses to achieve their objectives
+          through impactful <span class="text-black-300"
+            >digital strategies</span
+          >. <br /><br />We're on a mission to guide companies on an
+          exhilarating journey towards <span class="text-black-300"
+            >growth and success</span
+          >. Join us in navigating the dynamic landscape of <span
+            class="text-black-300">digital marketing</span
+          >, where effective strategies are the key to unlocking new heights for
+          your business.
+          <br /><br />Ready to start this journey together?
+        </Text>
+        <Button
+          variant="secondary"
+          size="sm"
+          className="mt-4 flex justify-start"
+        >
+          Get in Touch
+        </Button>
+      </div>
+    </div>
   </div>
-</section>
+</Container>

@@ -1,20 +1,23 @@
 ---
 import { Button, Text } from "../components";
 
-const title = "Data-Driven Marketing Mastery";
 const description =
   "Unlock Your Business Potential with Expertly Crafted Strategies and Insights";
-const button_text = "Start Now";
+const button_text = "Get Your Quote";
 ---
 
 <section class="py-12 sm:py-16 lg:py-20 xl:py-24">
   <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 relative z-20">
-    <div class="max-w-md mx-auto text-center">
-      <Text variant="h2">{title}</Text>
+    <div data-aos="fade-up" class="max-w-md mx-auto text-center">
+      <Text variant="h2" className="font-bold">
+        Data-Driven <br />Marketing Mastery
+      </Text>
       <Text variant="p" color="secondary" className="mt-5">
         {description}
       </Text>
-      <Button className="mt-8">{button_text}</Button>
+      <div data-aos="fade-up" data-aos-delay={400} class="mt-8">
+        <Button>{button_text}</Button>
+      </div>
     </div>
   </div>
 </section>

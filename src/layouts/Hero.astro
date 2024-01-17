@@ -3,16 +3,27 @@ import { Button, Text } from "../components";
 
 const description =
   "Join Toggle on our mission to empower businesses with data-driven marketing strategies for success!";
+const button_text = "Get in touch";
 ---
 
-<section class="relative py-24 sm:mt-12">
-  <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 relative z-20">
-    <div class="max-w-2xl mx-auto text-center">
-      <Text variant="h1">Elevate Your Brand's <br />Digital Journey</Text>
-      <Text variant="p" color="secondary" className="mt-5">
+<section class="relative py-52">
+  <div class="px-4 max-w-3xl mx-auto sm:px-6 lg:px-8">
+    <div class="text-center" data-aos="fade-up">
+      <Text variant="h1">
+        Elevate Your Brand's <br />Digital Journey
+      </Text>
+      <Text
+        variant="h4"
+        color="secondary"
+        className="mt-4 sm:mt-8 mx-auto font-normal font-sans"
+      >
         {description}
       </Text>
-      <Button className="mt-8">Get your Quote</Button>
+      <Button className="mt-4 sm:mt-8">{button_text}</Button>
     </div>
   </div>
+  <!-- <div
+    class="absolute -z-10 top-5 h-full w-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]"
+  >
+  </div> -->
 </section>

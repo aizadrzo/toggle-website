@@ -11,19 +11,20 @@ const Button = ({ children, size, variant, className, ...props}: Button) => (
 
 export default Button
 
-const ButtonCVA = cva("btn rounded-md capitalize h-auto font-medium transition duration-300 ease-in-out text-base font-semibold", {
+const ButtonCVA = cva("btn rounded-md capitalize h-auto font-medium transition duration-300 ease-in-out text-base font-semibold font-serif leading-none", {
     variants: {
         variant: {
-            primary: "btn-contain btn-primary",
-            secondary: "btn-outline btn-secondary",
+            primary: "btn-contain bg-yolk-100 border-none text-black-300 hover:bg-yolk-200",
+            secondary: "rounded-full border border-gray-200 bg-neutral-50 hover:border-gray-200 hover:bg-gray-200 text-black-100",
         },
         size: {
-            'sm': 'btn-sm py-1.5 px-3 text-sm',
-            'default':'btn-md py-3 px-6',
+            'sm': 'btn-sm py-1.5 px-3 text-base',
+            'default':'py-4 px-5 text-lg tracking-wide',
           }
     },
     defaultVariants: {
         variant: 'primary',
+        size:'default'
     }
 })
 

@@ -9,53 +9,59 @@ const description =
 
 const steps = [
   {
-    index: "🗺️",
+    index: "01",
     title: "Marketing Roadmap",
     description:
-      "Collaborate with us on an actionable plan to accomplish your marketing or business goals at every stage of engagement.",
-    delay: 200,
+      "Partner with us to collaboratively craft an actionable plan that ensures the achievement of your marketing or business goals at every stage of our engagement.",
   },
   {
-    index: "⚙️",
+    index: "02",
     title: "Brand Development",
     description:
-      "Set your organization up for success with a clear and compelling brand vision, voice and visual identity.",
-    delay: 400,
+      "Set your organization on a path to success by defining a clear, compelling brand vision, voice, and visual identity that resonates with your audience.",
   },
   {
-    index: "🎨",
+    index: "03",
     title: "Creative ‍Execution",
     description:
       "Scale your capabilities with a team who understands your brand vision across initiatives, delivering work that’s on time, on budget and on brand.",
-    delay: 600,
   },
 ];
 ---
 
-<Container className="bg-random-egg">
-  <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-3xl text-center">
-    <Text variant="h2">{title}</Text>
-    <Text variant="p" color="secondary" className="mt-4">{description}</Text>
-    <div class="mt-4 sm:mt-8 space-y-4">
-      {
-        steps.map((step) => (
-          <div data-aos="fade-up" data-aos-delay={step.delay}>
-            <Card className="bg-white drop-shadow-lg border border-gray-200">
-              <div class="flex items-start sm:items-center">
-                <div class="inline-flex items-center justify-center flex-shrink-0 w-10 h-10 sm:w-14 sm:h-14 rounded-xl bg-random-egg">
-                  <Text variant="h3">{step.index}</Text>
+<Container>
+  <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-5xl text-center">
+    <div class="max-w-3xl mx-auto">
+      <Text variant="h2">{title}</Text>
+      <Text variant="p" color="secondary" className="mt-4">
+        {description}
+      </Text>
+    </div>
+    <div class="mt-4 sm:mt-8 grid grid-cols-1 lg:grid-cols-2 gap-4">
+      <div data-aos="fade-up" class="aspect-square bg-gray-100 rounded-md">
+      </div>
+      <div class="space-y-4">
+        {
+          steps.map((step) => (
+            <div>
+              <Card>
+                <div class="flex items-start sm:items-center">
+                  <div class="inline-flex items-center justify-center flex-shrink-0 w-10 h-10 sm:w-14 sm:h-14">
+                    <Text variant="h3">{step.index}</Text>
+                  </div>
+                  <div class="ml-4 text-left">
+                    <Text variant="h4">{step.title}</Text>
+                    <Text variant="small" color="secondary">
+                      {step.description}
+                    </Text>
+                  </div>
                 </div>
-                <div class="ml-4 text-left">
-                  <Text variant="h3">{step.title}</Text>
-                  <Text variant="small" color="secondary">
-                    {step.description}
-                  </Text>
-                </div>
-              </div>
-            </Card>
-          </div>
-        ))
-      }
+              </Card>
+              <hr class="bg-gray-200 w-5/6 mx-auto" />
+            </div>
+          ))
+        }
+      </div>
     </div>
   </div>
 </Container>

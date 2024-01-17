@@ -1,0 +1,56 @@
+---
+import { twMerge } from "tailwind-merge";
+import { Text } from "../components";
+import Container from "./Container.astro";
+
+const title = "How can we help";
+
+const data = [
+  {
+    title: "Enhance Brand Visibility",
+    delay: 200,
+    description:
+      "Leverage digital marketing avenues such as pay-per-click and social media strategies to elevate brand visibility. These tools not only raise brand awareness but also engage new audiences, ultimately boosting sales and profitability.",
+  },
+  {
+    title: "Foster Customer Loyalty",
+    delay: 400,
+    description:
+      "Forge a resilient customer base through social media engagement, utilizing modern technology and intelligent systems for precise targeting. Establishing brand loyalty ensures businesses navigate challenges smoothly.",
+  },
+  {
+    title: "Cost-Effective Solutions",
+    delay: 600,
+    description:
+      "Tailored for small to medium-sized enterprises, digital marketing strategies offer cost-effective solutions. Some tools, like Facebook's analytics, are available for free, making these strategies accessible and budget-friendly.",
+  },
+];
+---
+
+<Container>
+  <div class="px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto text-center">
+    <Text variant="h2">{title}</Text>
+    <div class="mt-4 sm:mt-8 space-y-8">
+      {
+        data.map((data, index) => (
+          <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-4">
+            <div class="text-left lg:px-5">
+              <Text variant="h3">{data.title}</Text>
+              <Text variant="p" color="secondary" className="mt-2">
+                {data.description}
+              </Text>
+            </div>
+            <div
+              data-aos="fade-up"
+              data-aos-delay={data.delay}
+              class={twMerge(
+                "aspect-square bg-gray-100 rounded-md",
+                index % 2 !== 0 ? "order-first" : "order-first lg:order-last"
+              )}
+            />
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</Container>

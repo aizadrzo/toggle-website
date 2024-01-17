@@ -1,4 +1,6 @@
 ---
+import Footer from "./Footer.astro";
+
 const { title } = Astro.props;
 ---
 
@@ -17,6 +19,7 @@ const { title } = Astro.props;
   </head>
   <body class="flex-1 mx-auto">
     <slot />
+    <Footer />
     <script is:inline src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script is:inline>
       AOS.init({ delay: 300, easing: "linear" });

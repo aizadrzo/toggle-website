@@ -3,7 +3,7 @@ import { Text } from "../components";
 import Card from "./Card.astro";
 import Container from "./Container.astro";
 
-const title = "What is it we do?";
+const title = "What is it we do";
 
 const services = [
   {
@@ -63,7 +63,7 @@ const services = [
 ];
 ---
 
-<Container className="bg-random-egg">
+<Container>
   <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-5xl text-center">
     <Text variant="h2">{title}</Text>
     <div
@@ -73,10 +73,10 @@ const services = [
         services.map((service) => (
           <div data-aos="fade-up" data-aos-delay={service.delay}>
             <Card className="text-left bg-white border border-gray-200 drop-shadow-lg">
-              <div class="w-12 h-12 rounded-full mb-2 bg-random-egg grid place-content-center">
+              <div class="w-12 h-12 rounded-full mb-2 bg-gray-100 grid place-content-center">
                 <Text variant="h3">{service.icon}</Text>
               </div>
-              <Text variant="h3">{service.title}</Text>
+              <Text variant="h4">{service.title}</Text>
               <Text
                 variant="small"
                 color="secondary"

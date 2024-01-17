@@ -2,7 +2,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { type ElementType, type ReactNode } from "react";
 import { twMerge } from "tailwind-merge";
 
-type Variant = "h1" | "h2" | "h3" | "p" | "small";
+type Variant = "h1" | "h2" | "h3" | "h4" | "p" | "small";
 
 type Text = {
   variant: Variant;
@@ -14,6 +14,7 @@ const tags: Record<Variant, ElementType> = {
   h1: "h1",
   h2: "h2",
   h3: "h3",
+  h4: 'h4',
   p: "p",
   small: "span",
 };
@@ -21,7 +22,8 @@ const tags: Record<Variant, ElementType> = {
 const sizes: Record<Variant, string> = {
   h1: "text-5xl font-semibold sm:text-7xl font-serif",
   h2: "text-3xl font-semibold sm:text-5xl tracking-tight font-serif",
-  h3: "text-lg font-semibold sm:text-xl font-serif",
+  h3: "text-xl font-semibold sm:text-2xl font-serif",
+  h4: "text-lg font-semibold sm:text-xl font-serif",
   p: "text-base sm:text-lg font-sans",
   small: "text-xs sm:text-sm font-sans",
 };

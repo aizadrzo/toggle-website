@@ -47,7 +47,7 @@ const faqs = [
 ---
 
 <Container className="relative">
-  <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-3xl">
+  <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-5xl">
     <Text variant="h2" className="text-center">{title}</Text>
     <div class="mt-4 sm:mt-8 space-y-4">
       {
@@ -56,7 +56,7 @@ const faqs = [
             <Card className="collapse collapse-arrow p-0 border border-gray-200 bg-white">
               <input type="radio" name="my-accordion-1" checked="checked" />
               <div class="collapse-title pt-5 px-5">
-                <Text variant="h3">{faq.question}</Text>
+                <Text variant="h4">{faq.question}</Text>
               </div>
               <div class="collapse-content px-5">
                 <Text variant="p" color="secondary">
@@ -69,8 +69,8 @@ const faqs = [
       }
     </div>
   </div>
-  <div
+  <!-- <div
     class="absolute -z-10 top-5 h-full w-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]"
   >
-  </div>
+  </div> -->
 </Container>

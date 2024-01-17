@@ -1,18 +1,17 @@
 ---
 import { Button, Text } from "../components";
-import Card from "./Card.astro";
 import Container from "./Container.astro";
 
 const title = "What we are all about";
 ---
 
-<Container className="bg-random-egg">
-  <div class="px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto text-center">
+<Container>
+  <div class="px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto text-center">
     <Text variant="h2">{title}</Text>
-    <div data-aos="fade-up">
-      <Card
-        className="mt-4 sm:mt-8 bg-white p-8 border border-gray-200 drop-shadow-lg"
-      >
+    <div class="mt-4 sm:mt-8 grid grid-cols-1 lg:grid-cols-2 gap-4">
+      <div data-aos="fade-up" class="aspect-square bg-gray-100 rounded-md">
+      </div>
+      <div class="lg:px-5">
         <Text variant="p" color="secondary" className="text-left">
           Hello, we are <span class="text-black-300">Toggle!</span> 👋🏻<br /> At Toggle,
           we've identified the need for a more <span class="text-black-300"
@@ -30,48 +29,14 @@ const title = "What we are all about";
           your business.
           <br /><br />Ready to start this journey together?
         </Text>
-        <div class="pt-4 flex items-center justify-start">
-          <div class="avatar-group -space-x-6 rtl:space-x-reverse">
-            <div class="avatar border-transparent">
-              <div class="w-12">
-                <img
-                  src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
-                />
-              </div>
-            </div>
-            <div class="avatar border-transparent">
-              <div class="w-12">
-                <img
-                  src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
-                />
-              </div>
-            </div>
-            <div class="avatar border-transparent">
-              <div class="w-12">
-                <img
-                  src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
-                />
-              </div>
-            </div>
-            <div class="avatar border-transparent">
-              <div class="w-12">
-                <img
-                  src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="text-left w-full">
-            <Button
-              variant="secondary"
-              size="sm"
-              className="decoration-yolk-100"
-            >
-              Get in Touch
-            </Button>
-          </div>
-        </div>
-      </Card>
+        <Button
+          variant="secondary"
+          size="sm"
+          className="mt-4 flex justify-start"
+        >
+          Get in Touch
+        </Button>
+      </div>
     </div>
   </div>
 </Container>

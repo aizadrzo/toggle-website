@@ -6,11 +6,11 @@ const title = "What we are all about";
 ---
 
 <Container>
-  <div class="px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto text-center">
+  <div class="px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto text-center">
     <Text variant="h2">{title}</Text>
-    <div class="mt-4 sm:mt-8 grid grid-cols-1 lg:grid-cols-2 gap-4">
-      <div data-aos="fade-up" class="aspect-square bg-gray-100 rounded-md">
-      </div>
+    <div
+      class="mt-4 sm:mt-8 grid grid-cols-1 lg:grid-cols-2 gap-4 items-center"
+    >
       <div class="lg:px-5">
         <Text variant="p" color="secondary" className="text-left">
           Hello, we are <span class="text-black-300">Toggle!</span> 👋🏻<br /> At Toggle,
@@ -36,6 +36,8 @@ const title = "What we are all about";
         >
           Get in Touch
         </Button>
+      </div>
+      <div data-aos="fade-up" class="aspect-square bg-gray-100 rounded-md">
       </div>
     </div>
   </div>

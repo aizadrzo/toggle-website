@@ -30,14 +30,16 @@ const steps = [
 ---
 
 <Container>
-  <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-5xl text-center">
+  <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-6xl text-center">
     <div class="max-w-3xl mx-auto">
       <Text variant="h2">{title}</Text>
       <Text variant="p" color="secondary" className="mt-4">
         {description}
       </Text>
     </div>
-    <div class="mt-4 sm:mt-8 grid grid-cols-1 lg:grid-cols-2 gap-4">
+    <div
+      class="mt-4 sm:mt-8 grid grid-cols-1 lg:grid-cols-2 gap-4 items-center"
+    >
       <div data-aos="fade-up" class="aspect-square bg-gray-100 rounded-md">
       </div>
       <div class="space-y-4">
@@ -45,19 +47,18 @@ const steps = [
           steps.map((step) => (
             <div>
               <Card>
-                <div class="flex items-start sm:items-center">
-                  <div class="inline-flex items-center justify-center flex-shrink-0 w-10 h-10 sm:w-14 sm:h-14">
+                <div class="flex items-start">
+                  <div class="inline-flex items-center justify-center flex-shrink-0 w-10 h-10">
                     <Text variant="h3">{step.index}</Text>
                   </div>
                   <div class="ml-4 text-left">
-                    <Text variant="h4">{step.title}</Text>
-                    <Text variant="small" color="secondary">
+                    <Text variant="h3">{step.title}</Text>
+                    <Text variant="p" color="secondary">
                       {step.description}
                     </Text>
                   </div>
                 </div>
               </Card>
-              <hr class="bg-gray-200 w-5/6 mx-auto" />
             </div>
           ))
         }
